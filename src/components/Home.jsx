@@ -1,6 +1,7 @@
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import mh50 from   "../assests/mh50.jpg"
+import profil from '../assests/profil.jpg'
 import { Link } from 'react-scroll';
 
 
@@ -17,11 +18,10 @@ const Home = () => {
         <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
           I'm a futur  engineering
         </h2>
-        <p className='text-[#8892b0] py-4 max-w-[700px]'>
-          I’m a student at eniso
-        </p>
+        <p className='text-[#8892b0] py-4 max-w-[720px]'>
+        I am a third-year Computer Science student at the National Engineering School of Sousse (ENISo).        </p>
         <div className=' ml-80'   >
-          <img src={mh50} alt="image" width={200} height={150}  className='rounded-full border-8'   />
+          <img src={profil} alt="image" width={200} height={150}  className='rounded-full border-8'   />
         </div>
         <div>
           <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 rounded'>

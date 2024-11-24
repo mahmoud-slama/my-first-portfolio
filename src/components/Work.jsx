@@ -1,6 +1,8 @@
 import React from 'react'
 import workImg from '../assests/workImg.jpeg'
-import realEstate from '../assests/realestate.jpg'
+import realEstate from '../assests/image.png'
+import car from '../assests/car.jpeg'
+
 const Work = () => {
   return (
     <div name='work' className='w-full md:h-screen text-gray-300 bg-[#11587c] pb-20' >
@@ -19,7 +21,7 @@ const Work = () => {
             
             
 {/* Grid Item*/}
-<div style={{backgroundImage:`url(${workImg})`}}
+<div style={{backgroundImage:`url(${realEstate})`}}
              className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
                
                
@@ -27,16 +29,13 @@ const Work = () => {
                 <div className='pt-8 text-center'>
                     
                         <span className='text-2xl font-bold text-white tracking-wider'>
-                            React JS Application
+                        Credit APP frontend Application
                         </span>
                     
                     
                 <div className='pt-8 text-center'>
-                <a href="/">
-                        <button   className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg" >demo</button>
-                    </a>
-                    <a href="/">
+                
+                    <a href="https://github.com/nadiajazi/CreditApplicationFrontend">
                         <button   className="text-center rounded-lg px-4 py-3 m-2
                        bg-white text-gray-700 font-bold text-lg">code</button>
                     </a>
@@ -51,16 +50,13 @@ const Work = () => {
                 <div className='pt-8 text-center'>
                     
                         <span className='text-2xl font-bold text-white tracking-wider'>
-                            React JS Application
+                            Credit App backend  Application
                         </span>
                     
                     
                 <div className='pt-8 text-center'>
-                <a href="/">
-                        <button   className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg" >demo</button>
-                    </a>
-                    <a href="/">
+                
+                    <a href="https://github.com/mahmoud-slama/Creditappbackend">
                         <button   className="text-center rounded-lg px-4 py-3 m-2
                        bg-white text-gray-700 font-bold text-lg">code</button>
                     </a>
@@ -69,7 +65,7 @@ const Work = () => {
             </div>
             
 {/* Grid Item*/}
-<div style={{backgroundImage:`url(${workImg})`}}
+<div style={{backgroundImage:`url(${car})`}}
              className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
                
                
@@ -77,47 +73,20 @@ const Work = () => {
                 <div className='pt-8 text-center'>
                     
                         <span className='text-2xl font-bold text-white tracking-wider'>
-                            React JS Application
+                        Rentweels Application
                         </span>
                     
                     
                 <div className='pt-8 text-center'>
-                <a href="/">
-                        <button   className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg" >demo</button>
-                    </a>
-                    <a href="/">
+                
+                    <a href="https://github.com/mahmoud-slama/NEW-Rentweels">
                         <button   className="text-center rounded-lg px-4 py-3 m-2
                        bg-white text-gray-700 font-bold text-lg">code</button>
                     </a>
                     </div>
                     </div>
             </div>
-            <div style={{backgroundImage:`url(${realEstate})`}}
-             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'>
-               
-               
-                {/*hover effects*/}
-                <div className='pt-8 text-center'>
-                    
-                        <span className='text-2xl font-bold text-white tracking-wider'>
-                            React JS Application
-                        </span>
-                    
-                    
-                <div className='pt-8 text-center'>
-                <a href="/">
-                        <button   className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg" >demo</button>
-                    </a>
-                    <a href="/">
-                        <button   className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg">code</button>
-                    </a>
-                    </div>
-                    </div>
-            </div>
-            
+           
         </div>
       </div>
     </div>

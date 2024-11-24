@@ -49,7 +49,11 @@ const Navbar = () => {
             Work
           </Link>
         </li>
+        
+      
+        
         <li>
+          
           <Link to='contact' smooth={true} duration={500}>
             Contact
           </Link>
@@ -92,6 +96,7 @@ const Navbar = () => {
             Work
           </Link>
         </li>
+        
         <li className='py-6 text-4xl'>
           {' '}
           <Link onClick={handleClick} to='contact' smooth={true} duration={500}>
@@ -106,7 +111,7 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600 rounded'>
             <a
               className='flex justify-between items-center w-full text-gray-300 '
-              href='https://www.linkedin.com/feed/'
+              href='https://www.linkedin.com/in/slama-mahmoud-789799251/'
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -114,27 +119,31 @@ const Navbar = () => {
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333] rounded'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='https://github.com/'
+              href='https://github.com/mahmoud-slama'
             >
               Github <FaGithub size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]rounded'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox'
-            >
-              Email <HiOutlineMail size={30} />
-            </a>
-          </li>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0] rounded'>
+  <a
+    className='flex justify-between items-center w-full text-gray-300'
+    href='mailto:mahmoud.slama@eniso.u-sousse.tn' // Utilisation du protocole mailto:
+  >
+    Email <HiOutlineMail size={30} />
+  </a>
+</li>
+
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69] rounded'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300 rounded'
-              href='/'
-            >
-              Resume <BsFillPersonLinesFill size={30} />
-            </a>
-          </li>
+  <a
+    className='flex justify-between items-center w-full text-gray-300 rounded'
+    href='\cv-mahmoud.pdf' // Chemin vers ton fichier PDF dans le dossier public
+    target='_blank' // Ouvre le lien dans un nouvel onglet
+    rel='noopener noreferrer' // Sécurise le lien
+  >
+    Resume <BsFillPersonLinesFill size={30} />
+  </a>
+</li>
+
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#3d14d0] rounded'>
             <a
               className='flex justify-between items-center w-full text-gray-300 rounded'
@@ -143,14 +152,7 @@ const Navbar = () => {
               facebook<FaFacebook size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#780e51] rounded'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300 rounded'
-              href='https://www.instagram.com/?hl=fr'
-            >
-              Instagram <FaInstagram size={30} />
-            </a>
-          </li>
+        
         </ul>
       </div>
     </div>

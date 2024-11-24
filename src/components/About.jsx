@@ -17,11 +17,7 @@ const About = () => {
               <p>Hi. I'm Mahmoud Slama nice to meet you. Please take a look around.</p>
             </div>
             <div>
-              <p>I am passionate about building excellent software that improves
-              the lives of those around me. I specialize in creating software
-              for clients ranging from individuals and small-businesses all the
-              way to large enterprise corporations. What would you do if you had
-              a software expert available at your fingertips?</p>  
+              <p>A third-year engineering student specializing in applied computer science, I am passionate about web development and have gained solid experience in creating software solutions. Driven by innovation, I aim to leverage my technical skills to contribute to ambitious projects. My goal is to advance in the technology sector while continuing to learn and grow personally</p>  
             </div>
           </div>
       </div>
