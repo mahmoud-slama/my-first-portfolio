@@ -8,7 +8,6 @@ const Home = () => {
     <div name='home' className='w-full h-screen bg-[#11587c] flex justify-between items-center'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-        <p className='text-pink-600'>Hi, my name is</p>
         <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
           Mahmoud Slama
         </h1>
@@ -18,13 +17,14 @@ const Home = () => {
         <p className='text-[#8892b0] py-4 max-w-[720px]'>
           I am a third-year Computer Science student at the National Engineering School of Sousse (ENISo).
         </p>
-        <div className='ml-80'>
-          <img 
-            src={profil} 
-            alt="Mahmoud Slama" 
-            className='rounded-full border-8 w-[200px] h-[150px]' 
-          />
-        </div>
+        <div className="flex justify-center">
+  <img 
+    src={profil} 
+    alt="Mahmoud Slama" 
+    className="rounded-full border-8 w-[200px] h-auto sm:w-[150px] md:w-[200px] lg:w-[250px]" 
+  />
+</div>
+
         <div>
           <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600 rounded'>
             <Link to='work' smooth={true} duration={500}>
