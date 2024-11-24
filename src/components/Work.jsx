@@ -1,5 +1,4 @@
 import React from 'react'
-import workImg from '../assests/workImg.jpeg'
 import realEstate from '../assests/image.png'
 import car from '../assests/car.jpeg'
 
@@ -11,8 +10,8 @@ const Work = () => {
             <div className='pb-8'>
 
             <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>work</p>
-            <p className='py-6'>// check out some of my recent work</p>
-        </div>
+            <p className='py-6'>{'// check out some of my recent work'}</p>
+            </div>
         {/*container*/}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
 
