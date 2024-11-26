@@ -12,7 +12,7 @@ const Home = () => {
           Mahmoud Slama
         </h1>
         <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
-          I'm a futur engineering
+          I'm a futur engineer
         </h2>
         <p className='text-[#8892b0] py-4 max-w-[720px]'>
           I am a third-year Computer Science student at the National Engineering School of Sousse (ENISo).
