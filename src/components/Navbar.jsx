@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import Logo from '../assests/logo4.png';
+import Logo from '../assests/logo4-removebg-preview.png';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
@@ -16,35 +16,35 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#11587c] text-gray-300'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#11587c] text-gray-300 z-50'>
       {/* Logo */}
       <div>
-        <img src={Logo} alt='Brand Logo' style={{ width: '150px', height: '100px' }} />
+        <img src={Logo} alt='Brand Logo' style={{ width: '120px', height: '80px' }} />
       </div>
 
       {/* Desktop Menu */}
-      <ul className='hidden md:flex'>
-        <li>
+      <ul className='hidden md:flex gap-6 text-sm'>
+        <li className='hover:text-white transition-colors'>
           <Link to='home' smooth={true} duration={500}>
             Home
           </Link>
         </li>
-        <li>
+        <li className='hover:text-white transition-colors'>
           <Link to='about' smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li>
+        <li className='hover:text-white transition-colors'>
           <Link to='skills' smooth={true} duration={500}>
             Skills
           </Link>
         </li>
-        <li>
+        <li className='hover:text-white transition-colors'>
           <Link to='work' smooth={true} duration={500}>
             Work
           </Link>
         </li>
-        <li>
+        <li className='hover:text-white transition-colors'>
           <Link to='contact' smooth={true} duration={500}>
             Contact
           </Link>

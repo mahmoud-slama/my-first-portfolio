@@ -18,6 +18,10 @@ import {
   SiTypescript,
   SiDocker,
   SiC,
+  SiGitlab,
+  SiAmazonaws,
+  SiKubernetes,
+  SiJenkins,
 } from 'react-icons/si';
 import { DiJava } from 'react-icons/di';
 
@@ -39,6 +43,10 @@ const skillsData = [
   { icon: <FaPython className="w-20 h-20 mx-auto text-yellow-400" />, label: 'Python' },
   { icon: <SiDocker className="w-20 h-20 mx-auto text-blue-400" />, label: 'Docker' },
   { icon: <FaGitAlt className="w-20 h-20 mx-auto text-orange-400" />, label: 'Git' },
+  { icon: <SiGitlab className="w-20 h-20 mx-auto text-orange-600" />, label: 'GitLab CI/CD' },
+  { icon: <SiAmazonaws className="w-20 h-20 mx-auto text-yellow-500" />, label: 'AWS' },
+  { icon: <SiKubernetes className="w-20 h-20 mx-auto text-blue-600" />, label: 'Kubernetes' },
+  { icon: <SiJenkins className="w-20 h-20 mx-auto text-gray-300" />, label: 'Jenkins' },
 ];
 
 const Skills = () => {
