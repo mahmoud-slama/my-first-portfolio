@@ -1,81 +1,104 @@
-import React from 'react';
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaPython,
-  FaGitAlt,
-} from 'react-icons/fa';
-import {
-  SiMongodb,
-  SiMysql,
-  SiPostgresql,
-  SiAngular,
-  SiSpringboot,
-  SiExpress,
-  SiTypescript,
-  SiDocker,
-  SiC,
-  SiGitlab,
-  SiAmazonaws,
-  SiKubernetes,
-  SiJenkins,
-} from 'react-icons/si';
-import { DiJava } from 'react-icons/di';
+import { FiCloud, FiCode, FiDatabase, FiGitBranch, FiServer } from 'react-icons/fi';
 
-const skillsData = [
-  { icon: <FaHtml5 className="w-20 h-20 mx-auto text-orange-500" />, label: 'HTML' },
-  { icon: <FaCss3Alt className="w-20 h-20 mx-auto text-blue-500" />, label: 'CSS' },
-  { icon: <FaJs className="w-20 h-20 mx-auto text-yellow-500" />, label: 'JavaScript' },
-  { icon: <FaReact className="w-20 h-20 mx-auto text-blue-300" />, label: 'React' },
-  { icon: <SiAngular className="w-20 h-20 mx-auto text-red-500" />, label: 'Angular' },
-  { icon: <SiTypescript className="w-20 h-20 mx-auto text-blue-400" />, label: 'TypeScript' },
-  { icon: <FaNodeJs className="w-20 h-20 mx-auto text-green-500" />, label: 'Node.js' },
-  { icon: <SiExpress className="w-20 h-20 mx-auto text-gray-500" />, label: 'Express' },
-  { icon: <SiSpringboot className="w-20 h-20 mx-auto text-green-600" />, label: 'Spring Boot' },
-  { icon: <DiJava className="w-20 h-20 mx-auto text-orange-600" />, label: 'Java' },
-  { icon: <SiMongodb className="w-20 h-20 mx-auto text-green-700" />, label: 'MongoDB' },
-  { icon: <SiMysql className="w-20 h-20 mx-auto text-blue-700" />, label: 'MySQL' },
-  { icon: <SiPostgresql className="w-20 h-20 mx-auto text-blue-500" />, label: 'PostgreSQL' },
-  { icon: <SiC className="w-20 h-20 mx-auto text-blue-600" />, label: 'C' },
-  { icon: <FaPython className="w-20 h-20 mx-auto text-yellow-400" />, label: 'Python' },
-  { icon: <SiDocker className="w-20 h-20 mx-auto text-blue-400" />, label: 'Docker' },
-  { icon: <FaGitAlt className="w-20 h-20 mx-auto text-orange-400" />, label: 'Git' },
-  { icon: <SiGitlab className="w-20 h-20 mx-auto text-orange-600" />, label: 'GitLab CI/CD' },
-  { icon: <SiAmazonaws className="w-20 h-20 mx-auto text-yellow-500" />, label: 'AWS' },
-  { icon: <SiKubernetes className="w-20 h-20 mx-auto text-blue-600" />, label: 'Kubernetes' },
-  { icon: <SiJenkins className="w-20 h-20 mx-auto text-gray-300" />, label: 'Jenkins' },
+const experiences = [
+  {
+    period: 'Août 2025 — Aujourd’hui',
+    company: 'Devwise',
+    role: 'Chef de Projet Technique / Ingénieur Logiciel',
+    text: 'Pilotage technique de Speedline, coordination d’une équipe multidisciplinaire, architecture microservices, suivi des livraisons et développement de fonctionnalités temps réel.',
+    current: true,
+  },
+  {
+    period: 'Fév. 2025 — Mai 2025',
+    company: 'Devwise',
+    role: 'Projet de fin d’études',
+    text: 'Conception et déploiement d’une plateforme associative avec paiement, messagerie, dashboards et chaîne CI/CD sur AWS.',
+  },
+  {
+    period: 'Juin 2024 — Août 2024',
+    company: 'Dotcom',
+    role: 'Stage d’ingénieur',
+    text: 'Application de gestion d’événements, tableaux de bord temps réel, authentification multi-rôles et gestion des inscriptions.',
+  },
+  {
+    period: 'Juil. 2023 — Août 2023',
+    company: 'Devwise',
+    role: 'Stage d’initiation',
+    text: 'Développement et optimisation d’une application de gestion de bâtiments avec Spring Boot, Angular et MySQL.',
+  },
 ];
 
-const Skills = () => {
-  return (
-    <div name="skills" className="w-full min-h-screen bg-[#11587c] text-gray-300">
-      {/* Container */}
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        {/* Title */}
-        <div>
-          <p className="text-4xl font-bold inline border-b-4 border-pink-600">Skills</p>
-          <p className="py-4">These are the technologies I've worked with</p>
+const education = [
+  { school: 'ENISo', degree: 'Diplôme National d’Ingénieur en Informatique Appliquée', period: '2022 — 2025' },
+  { school: 'IPEIN', degree: 'Cycle préparatoire aux études d’ingénieur', period: '2020 — 2022' },
+  { school: 'Lycée Mahmoud El Messadi', degree: 'Baccalauréat', period: '2020' },
+];
+
+const expertise = [
+  { icon: <FiCode />, title: 'Frontend', items: ['Angular', 'React', 'TypeScript', 'JavaScript', 'HTML / CSS'] },
+  { icon: <FiServer />, title: 'Backend', items: ['Spring Boot', 'Node.js', 'Express.js', 'API REST', 'Microservices'] },
+  { icon: <FiDatabase />, title: 'Data', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Modélisation', 'Performance'] },
+  { icon: <FiCloud />, title: 'Cloud & DevOps', items: ['Docker', 'Kubernetes', 'GitLab CI/CD', 'AWS · GCP · OVH', 'Observabilité'] },
+  { icon: <FiGitBranch />, title: 'Leadership', items: ['Planning', 'Découpage des tâches', 'Suivi d’avancement', 'Code review', 'Agile / Scrum'] },
+];
+
+const Skills = () => (
+  <>
+    <section id="experience" className="section section--cream">
+      <div className="container experience-layout">
+        <div className="experience-sticky">
+          <span className="section-index">03 / Parcours</span>
+          <h2>Construire,<br />apprendre,<br /><em>prendre le lead.</em></h2>
+          <p>Un parcours progressif, de l’ingénierie logicielle au pilotage de produits numériques.</p>
+          <div className="education-list">
+            <span className="education-label">Formation</span>
+            {education.map((item) => (
+              <article key={item.school}>
+                <div><strong>{item.school}</strong><small>{item.period}</small></div>
+                <p>{item.degree}</p>
+              </article>
+            ))}
+          </div>
         </div>
 
-        {/* Technologies Grid */}
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-center py-8">
-          {skillsData.map((skill, index) => (
-            <div
-              key={index}
-              className="shadow-md shadow-[#040c16] hover:scale-110 duration-500"
-              aria-label={skill.label}
-            >
-              {skill.icon}
-              <p className="my-4">{skill.label}</p>
-            </div>
+        <div className="timeline">
+          {experiences.map((experience) => (
+            <article className="timeline-item" key={`${experience.company}-${experience.period}`}>
+              <div className="timeline-marker"><span /></div>
+              <div className="timeline-period">
+                {experience.period}
+                {experience.current && <span className="current-badge">En poste</span>}
+              </div>
+              <div className="timeline-content">
+                <span>{experience.company}</span>
+                <h3>{experience.role}</h3>
+                <p>{experience.text}</p>
+              </div>
+            </article>
           ))}
         </div>
       </div>
-    </div>
-  );
-};
+    </section>
+
+    <section id="expertise" className="section section--light">
+      <div className="container">
+        <div className="section-heading section-heading--split expertise-heading">
+          <div><span className="section-index">04 / Expertise</span><h2>Une stack au service du produit.</h2></div>
+          <p>Je choisis les outils selon le problème à résoudre, avec une priorité constante : qualité, maintenabilité et vitesse de livraison.</p>
+        </div>
+
+        <div className="expertise-grid">
+          {expertise.map((group) => (
+            <article className="expertise-card" key={group.title}>
+              <div className="expertise-icon">{group.icon}</div>
+              <h3>{group.title}</h3>
+              <ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </>
+);
 
 export default Skills;

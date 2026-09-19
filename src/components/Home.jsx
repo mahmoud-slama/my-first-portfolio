@@ -1,48 +1,56 @@
-import React from 'react';
-import { HiArrowNarrowRight } from 'react-icons/hi';
-import profil from '../assests/profil.jpg';
-import { Link } from 'react-scroll';
+import { FiArrowDown, FiArrowUpRight, FiDownload, FiMapPin } from 'react-icons/fi';
+import profile from '../assests/profil.jpg';
 
-const Home = () => {
-  return (
-    <div name='home' className='w-full min-h-screen bg-[#11587c] flex items-center'>
-      {/* Container */}
-      <div className='max-w-[1000px] mx-auto px-4 sm:px-8 w-full h-full pt-[120px]'>
-        <div className='flex flex-col justify-center h-full'>
-          <h1 className='text-5xl sm:text-6xl md:text-8xl font-bold text-white mb-4 mt-4'>
-            Mahmoud Slama
-          </h1>
-          <h2 className='text-3xl sm:text-4xl md:text-6xl font-bold text-[#8892b0]'>
-            I'm a Software Engineering
-          </h2>
-          <h2 className='text-3xl sm:text-4xl md:text-6xl font-bold text-[#8892b0] mt-2'>
-            Developer
-          </h2>
-          <p className='text-[#8892b0] py-4 max-w-[720px] text-lg sm:text-xl'>
-            Graduate from the National Engineering School of Sousse (ENISo) with a degree in Computer Science Engineering.
-          </p>
-          <div className="flex justify-center my-6">
-            <img 
-              src={profil} 
-              alt="Mahmoud Slama" 
-              className="rounded-full border-4 sm:border-8 w-[150px] sm:w-[200px] md:w-[225px] lg:w-[250px] h-auto shadow-lg" 
-            />
-          </div>
+const Home = () => (
+  <section id="home" className="hero">
+    <div className="hero-grid" aria-hidden="true" />
+    <div className="container hero-inner">
+      <div className="hero-copy reveal">
+        <div className="eyebrow"><span className="status-dot" />Tech Lead · Full-stack · DevOps</div>
+        <h1>Je transforme des besoins complexes en <span>produits fiables.</span></h1>
+        <p className="hero-lead">
+          Ingénieur logiciel basé en Tunisie. Je pilote des équipes et conçois des plateformes web
+          distribuées, de l’architecture jusqu’à la mise en production.
+        </p>
 
-          <div className="flex justify-center mt-6">
-            <Link to='work' smooth={true} duration={500}>
-              <button className='text-white group border-2 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base flex items-center hover:bg-pink-600 hover:border-pink-600 rounded-lg shadow-lg hover:shadow-pink-500/50 transition-all duration-300'>
-                View My Work
-                <span className='group-hover:rotate-90 duration-300'>
-                  <HiArrowNarrowRight className='ml-2 sm:ml-3' />
-                </span>
-              </button>
-            </Link>
-          </div>
+        <div className="hero-actions">
+          <a className="button button--primary" href="#projects">Découvrir mes projets <FiArrowDown aria-hidden="true" /></a>
+          <a className="button button--ghost" href="/cv-mahmoud-slama.pdf" target="_blank" rel="noreferrer">
+            Télécharger mon CV <FiDownload aria-hidden="true" />
+          </a>
+        </div>
+
+        <div className="hero-meta">
+          <span><FiMapPin aria-hidden="true" /> Nabeul, Tunisie</span>
+          <span><span className="status-dot" /> Disponible pour de nouveaux défis</span>
         </div>
       </div>
+
+      <div className="hero-visual reveal reveal--delay">
+        <div className="portrait-frame">
+          <img src={profile} alt="Mahmoud Slama, ingénieur logiciel et Tech Lead" />
+          <div className="portrait-gradient" />
+          <div className="portrait-caption">
+            <span>Actuellement</span>
+            <strong>Chef de Projet Technique</strong>
+            <small>Devwise · depuis août 2025</small>
+          </div>
+        </div>
+        <a className="hero-link-card" href="https://speedlineapp.tn" target="_blank" rel="noreferrer">
+          <span>Dernier produit livré</span><strong>Speedline</strong><FiArrowUpRight aria-hidden="true" />
+        </a>
+        <span className="orbit-label orbit-label--one">Architecture</span>
+        <span className="orbit-label orbit-label--two">Leadership</span>
+      </div>
     </div>
-  );
-};
+
+    <div className="container hero-stats" aria-label="Chiffres clés">
+      <div><strong>3</strong><span>produits en ligne</span></div>
+      <div><strong>4</strong><span>interfaces dans l’écosystème Speedline</span></div>
+      <div><strong>360°</strong><span>du planning au déploiement</span></div>
+      <div><strong>2025</strong><span>Diplômé ingénieur ENISo</span></div>
+    </div>
+  </section>
+);
 
 export default Home;

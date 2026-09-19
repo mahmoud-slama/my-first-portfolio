@@ -1,150 +1,62 @@
-import React, { useState } from 'react';
-import {
-  FaBars,
-  FaTimes,
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-} from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import Logo from '../assests/logo4-removebg-preview.png';
-import { Link } from 'react-scroll';
+import { useEffect, useState } from 'react';
+import { FiArrowUpRight, FiMenu, FiX } from 'react-icons/fi';
+
+const navigation = [
+  { label: 'À propos', href: '#about' },
+  { label: 'Projets', href: '#projects' },
+  { label: 'Parcours', href: '#experience' },
+  { label: 'Expertise', href: '#expertise' },
+];
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const handleClick = () => setNav(!nav);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#11587c] text-gray-300 z-50'>
-      {/* Logo */}
-      <div>
-        <img src={Logo} alt='Brand Logo' style={{ width: '120px', height: '80px' }} />
+    <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
+      <div className="nav-container">
+        <a className="brand" href="#home" aria-label="Accueil - Mahmoud Slama" onClick={() => setIsOpen(false)}>
+          <span className="brand-mark">MS</span>
+          <span className="brand-copy">
+            <strong>Mahmoud Slama</strong>
+            <small>Software Engineer</small>
+          </span>
+        </a>
+
+        <nav className="desktop-nav" aria-label="Navigation principale">
+          {navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
+        </nav>
+
+        <a className="nav-cta" href="#contact">Me contacter <FiArrowUpRight aria-hidden="true" /></a>
+
+        <button
+          className="menu-button"
+          type="button"
+          onClick={() => setIsOpen((current) => !current)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
+          aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+        >
+          {isOpen ? <FiX /> : <FiMenu />}
+        </button>
       </div>
 
-      {/* Desktop Menu */}
-      <ul className='hidden md:flex gap-6 text-sm'>
-        <li className='hover:text-white transition-colors'>
-          <Link to='home' smooth={true} duration={500}>
-            Home
-          </Link>
-        </li>
-        <li className='hover:text-white transition-colors'>
-          <Link to='about' smooth={true} duration={500}>
-            About
-          </Link>
-        </li>
-        <li className='hover:text-white transition-colors'>
-          <Link to='skills' smooth={true} duration={500}>
-            Skills
-          </Link>
-        </li>
-        <li className='hover:text-white transition-colors'>
-          <Link to='work' smooth={true} duration={500}>
-            Work
-          </Link>
-        </li>
-        <li className='hover:text-white transition-colors'>
-          <Link to='contact' smooth={true} duration={500}>
-            Contact
-          </Link>
-        </li>
-      </ul>
-
-      {/* Hamburger Menu */}
-      <div onClick={handleClick} className='md:hidden z-10'>
-        {!nav ? <FaBars /> : <FaTimes />}
+      <div id="mobile-navigation" className={`mobile-nav ${isOpen ? 'mobile-nav--open' : ''}`}>
+        {navigation.map((item, index) => (
+          <a key={item.href} href={item.href} onClick={() => setIsOpen(false)}>
+            <span>0{index + 1}</span>{item.label}
+          </a>
+        ))}
+        <a href="#contact" onClick={() => setIsOpen(false)}><span>05</span>Me contacter</a>
       </div>
-
-      {/* Mobile Menu */}
-      <ul
-        className={
-          !nav
-            ? 'hidden'
-            : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
-        }
-      >
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='home' smooth={true} duration={500}>
-            Home
-          </Link>
-        </li>
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='about' smooth={true} duration={500}>
-            About
-          </Link>
-        </li>
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
-            Skills
-          </Link>
-        </li>
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='work' smooth={true} duration={500}>
-            Work
-          </Link>
-        </li>
-        <li className='py-6 text-4xl'>
-          <Link onClick={handleClick} to='contact' smooth={true} duration={500}>
-            Contact
-          </Link>
-        </li>
-      </ul>
-
-      {/* Social Icons */}
-      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
-        <ul>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600 rounded'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='https://www.linkedin.com/in/slama-mahmoud-789799251/'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Linkedin <FaLinkedin size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333] rounded'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='https://github.com/mahmoud-slama'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Github <FaGithub size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0] rounded'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='mailto:mahmoud.slama@eniso.u-sousse.tn'
-            >
-              Email <HiOutlineMail size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69] rounded'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href={`${process.env.PUBLIC_URL}/cv-mahmoud.pdf`}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Resume <BsFillPersonLinesFill size={30} />
-            </a>
-          </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#3d14d0] rounded'>
-            <a
-              className='flex justify-between items-center w-full text-gray-300'
-              href='https://www.facebook.com/slama.mahmoud.313'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Facebook <FaFacebook size={30} />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </header>
   );
 };
 

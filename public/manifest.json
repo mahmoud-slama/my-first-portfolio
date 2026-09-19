@@ -1,6 +1,6 @@
 {
   "short_name": "Mahmoud Slama",
-  "name": "Mahmoud Slama - Software Engineer Portfolio",
+  "name": "Mahmoud Slama - Tech Lead & Software Engineer",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#11587c",
-  "background_color": "#11587c"
+  "theme_color": "#142033",
+  "background_color": "#fbfaf7"
 }

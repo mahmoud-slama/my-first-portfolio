@@ -1,28 +1,33 @@
-import React from 'react';
+import { FiCheck, FiCode, FiLayers, FiUsers } from 'react-icons/fi';
 
-const About = () => {
-  return (
-    <div name='about' className='w-full min-h-screen bg-[#11587c] text-gray-300 py-16'>
-      <div className='flex flex-col justify-center items-center w-full h-full px-4'>
-        <div className='max-w-[1000px] w-full flex flex-col sm:grid sm:grid-cols-2 gap-4 sm:gap-8 mb-8'>
-          <div className='text-center sm:text-right pb-4 sm:pb-8'>
-            <p className='text-3xl sm:text-4xl font-bold inline border-b-4 border-pink-600'>
-              About
-            </p>
-          </div>
-          <div></div>
-        </div>
-        <div className='max-w-[1000px] w-full flex flex-col sm:grid sm:grid-cols-2 gap-6 sm:gap-8 px-4'>
-          <div className='text-center sm:text-right text-2xl sm:text-3xl md:text-4xl font-bold'>
-            <p>Hi. I'm Mahmoud Slama nice to meet you. Please take a look around.</p>
-          </div>
-          <div>
-            <p className='text-base sm:text-lg'>As a recently graduated junior developer specializing in applied computer science, I am passionate about web development and have gained solid experience in creating software solutions. Through my academic projects and internships, including my final year project (PFE), I have developed strong technical skills in modern web technologies. Driven by innovation, I aim to leverage my expertise to contribute to ambitious projects while continuing to grow professionally in the technology sector.</p>  
-          </div>
+const pillars = [
+  { number: '01', icon: <FiUsers />, title: 'Piloter', text: 'Planifier les sprints, répartir les tâches et rendre l’avancement visible pour toute l’équipe.' },
+  { number: '02', icon: <FiLayers />, title: 'Concevoir', text: 'Transformer les enjeux métier en architectures modulaires, maintenables et scalables.' },
+  { number: '03', icon: <FiCode />, title: 'Livrer', text: 'Développer les fonctionnalités critiques, garantir la qualité et automatiser le déploiement.' },
+];
+
+const About = () => (
+  <section id="about" className="section section--light">
+    <div className="container">
+      <div className="section-heading section-heading--split">
+        <div><span className="section-index">01 / À propos</span><h2>Du code à la coordination.</h2></div>
+        <div className="section-intro">
+          <p>Mon rôle ne s’arrête pas à développer. Je crée le cadre qui permet à une équipe de construire vite, proprement et dans la bonne direction.</p>
+          <p>Spécialisé en développement full-stack et DevOps, j’interviens sur des produits à forte contrainte métier : livraison à la demande, plateformes éducatives et systèmes de gestion.</p>
+          <div className="proof-line"><FiCheck /> Architecture · Exécution · Livraison</div>
         </div>
       </div>
+
+      <div className="pillars-grid">
+        {pillars.map((pillar) => (
+          <article className="pillar-card" key={pillar.title}>
+            <div className="pillar-top"><span className="pillar-icon">{pillar.icon}</span><span className="pillar-number">{pillar.number}</span></div>
+            <h3>{pillar.title}</h3><p>{pillar.text}</p>
+          </article>
+        ))}
+      </div>
     </div>
-  );
-};
+  </section>
+);
 
 export default About;

@@ -1,32 +1,28 @@
-# Mahmoud Slama - Portfolio
+# Portfolio - Mahmoud Slama
 
-Personal portfolio for Mahmoud Slama, a software engineer focused on full-stack development and DevOps.
+Portfolio professionnel de Mahmoud Slama, Tech Lead et ingénieur logiciel full-stack spécialisé en architecture web, DevOps et pilotage de produits numériques.
 
-## Highlights
+## Projets présentés
 
-- Professional experience and selected software projects
-- Frontend, backend, cloud, and DevOps skills
-- Responsive React interface
-- Direct links to GitHub, LinkedIn, email, and CV
-- Automatic deployment to GitHub Pages
+- [Speedline](https://speedlineapp.tn) - plateforme de livraison à la demande
+- [ExamBuilder](https://exambuilder.tn) - plateforme éducative
+- [Helpify](https://helpify.tn) - plateforme de gestion associative
 
-## Tech stack
-
-React, Tailwind CSS, JavaScript, and GitHub Actions.
-
-## Local development
+## Développement local
 
 ```bash
 npm ci
 npm start
 ```
 
-Create a production build with:
+## Build de production
 
 ```bash
 npm run build
 ```
 
-## Deployment
+Le projet utilise React, Tailwind CSS et React Icons.
 
-Every push to `master` builds and deploys the portfolio to GitHub Pages.
+## Déploiement
+
+Chaque push sur `master` publie automatiquement le portfolio sur GitHub Pages.

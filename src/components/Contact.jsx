@@ -1,33 +1,42 @@
-import React from 'react'
+import { FiArrowUp, FiArrowUpRight, FiDownload, FiGithub, FiLinkedin, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 
-const Contact = () => {
-  return (
-    <div name='contact' className='w-full h-screen bg-[#11587c] flex justify-center items-center p-4'>
-        <form method='POST' action="https://getform.io/f/baba9d63-39b7-4d49-9fe8-cb47b4666ee1" className='flex flex-col max-w-[600px] w-full'>
-            <div className='pb-8'>
-                <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>
-                    Contact
-                </p>
-                <p className='text-gray-300 py-4'>
-                    / Submit the form below or shoot me an email<br />
-                    <a href="mailto:slama.mahmoud940@gmail.com" className='underline'>slama.mahmoud940@gmail.com</a>
-                </p>
-            </div>
-            <input
-                className='bg-[#ccd6f6] p-2 mb-4 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600'
-                type="text" placeholder='Name' name='name' />
-            <input
-                className='my-4 p-2 bg-[#ccd6f6] rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600'
-                type="email" placeholder='Email' name='email' />
-            <textarea
-                className='bg-[#ccd6f6] p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600'
-                name="message" rows="10" placeholder='Message'></textarea>
-            <button className='text-white border-2 border-pink-600 hover:bg-pink-600 hover:border-pink-600 px-6 py-3 my-8 mx-auto flex items-center rounded-md'>
-                Let's Collaborate
-            </button>
-        </form>
+const Contact = () => (
+  <footer id="contact" className="contact-section">
+    <div className="container">
+      <div className="contact-top">
+        <span className="section-index section-index--light">05 / Contact</span>
+        <div className="contact-title-row">
+          <h2>Un projet ambitieux<br />à construire ?</h2>
+          <a className="contact-round-button" href="mailto:slama.mahmoud940@gmail.com" aria-label="Envoyer un e-mail à Mahmoud">
+            Parlons-en <FiArrowUpRight aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+
+      <div className="contact-grid">
+        <a href="mailto:slama.mahmoud940@gmail.com" className="contact-item">
+          <FiMail /><span><small>E-mail</small><strong>slama.mahmoud940@gmail.com</strong></span>
+        </a>
+        <a href="tel:+21622867764" className="contact-item">
+          <FiPhone /><span><small>Téléphone</small><strong>+216 22 867 764</strong></span>
+        </a>
+        <div className="contact-item">
+          <FiMapPin /><span><small>Localisation</small><strong>Nabeul, Tunisie</strong></span>
+        </div>
+      </div>
+
+      <div className="footer-line">
+        <div className="footer-brand"><span className="brand-mark brand-mark--light">MS</span><span>Mahmoud Slama<br /><small>Tech Lead & Software Engineer</small></span></div>
+        <div className="footer-links">
+          <a href="https://www.linkedin.com/in/slama-mahmoud-789799251/" target="_blank" rel="noreferrer"><FiLinkedin /> LinkedIn</a>
+          <a href="https://github.com/mahmoud-slama" target="_blank" rel="noreferrer"><FiGithub /> GitHub</a>
+          <a href="/cv-mahmoud-slama.pdf" target="_blank" rel="noreferrer"><FiDownload /> CV</a>
+        </div>
+        <a className="back-to-top" href="#home" aria-label="Retour en haut"><FiArrowUp /></a>
+      </div>
+      <p className="copyright">© {new Date().getFullYear()} Mahmoud Slama. Conçu pour présenter le travail, pas seulement la stack.</p>
     </div>
-  )
-}
+  </footer>
+);
 
 export default Contact;
