@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "mahmoud-slama-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +9,6 @@
     "autoprefixer": "^10.4.13",
     "classname": "^0.0.0",
     "classnames": "^2.3.2",
-    "my-app": "file:",
     "postcss": "^8.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -24,6 +23,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "eslintConfig": {
     "extends": [
