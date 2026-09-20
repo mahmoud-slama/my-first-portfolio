@@ -3,13 +3,15 @@
   "name": "Mahmoud Slama - Tech Lead & Software Engineer",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "start_url": ".",
   "display": "standalone",
+  "lang": "fr",
   "theme_color": "#142033",
   "background_color": "#fbfaf7"
 }

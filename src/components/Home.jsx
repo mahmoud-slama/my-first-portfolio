@@ -7,15 +7,15 @@ const Home = () => (
     <div className="container hero-inner">
       <div className="hero-copy reveal">
         <div className="eyebrow"><span className="status-dot" />Tech Lead · Full-stack · DevOps</div>
-        <h1>Je transforme des besoins complexes en <span>produits fiables.</span></h1>
+        <h1>Mahmoud Slama, <span>Tech Lead & ingénieur logiciel full-stack.</span></h1>
         <p className="hero-lead">
-          Ingénieur logiciel basé en Tunisie. Je pilote des équipes et conçois des plateformes web
-          distribuées, de l’architecture jusqu’à la mise en production.
+          Je transforme des besoins complexes en produits fiables. Basé en Tunisie, je pilote des équipes
+          et conçois des plateformes web distribuées, de l’architecture jusqu’à la mise en production.
         </p>
 
         <div className="hero-actions">
           <a className="button button--primary" href="#projects">Découvrir mes projets <FiArrowDown aria-hidden="true" /></a>
-          <a className="button button--ghost" href="/cv-mahmoud-slama.pdf" target="_blank" rel="noreferrer">
+          <a className="button button--ghost" href={`${process.env.PUBLIC_URL}/cv-mahmoud-slama.pdf`} target="_blank" rel="noreferrer">
             Télécharger mon CV <FiDownload aria-hidden="true" />
           </a>
         </div>
